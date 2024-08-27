@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Components Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Your Computer Components</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="processor">Processor</label>
+                <div class="component">
+                    <img src="./IMAGES/IMAGES/processor.jpg" alt="Processor" class="component-img">
+                    <select id="processor" name="processor" onchange="calculateTotal()">
+                        <option value="0">--Select Processor--</option>
+                        <option value="200">Intel i5 - $200</option>
+                        <option value="300">Intel i7 - $300</option>
+                        <option value="400">Intel i9 - $400</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ram">RAM</label>
+                <div class="component">
+                    <img src="./IMAGES/IMAGES/ram.jpg" alt="RAM" class="component-img">
+                    <select id="ram" name="ram" onchange="calculateTotal()">
+                        <option value="0">--Select RAM--</option>
+                        <option value="50">8GB - $50</option>
+                        <option value="100">16GB - $100</option>
+                        <option value="150">32GB - $150</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="storage">Storage</label>
+                <div class="component">
+                    <img src="./IMAGES/IMAGES/storage.jpg" alt="Storage" class="component-img">
+                    <select id="storage" name="storage" onchange="calculateTotal()">
+                        <option value="0">--Select Storage--</option>
+                        <option value="50">256GB SSD - $50</option>
+                        <option value="100">512GB SSD - $100</option>
+                        <option value="150">1TB SSD - $150</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="graphics">Graphics Card</label>
+                <div class="component">
+                    <img src="./IMAGES/IMAGES/graphic.jpg" alt="Graphics Card" class="component-img">
+                    <select id="graphics" name="graphics" onchange="calculateTotal()">
+                        <option value="0">--Select Graphics Card--</option>
+                        <option value="200">NVIDIA GTX 1660 - $200</option>
+                        <option value="400">NVIDIA RTX 3060 - $400</option>
+                        <option value="600">NVIDIA RTX 3080 - $600</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="total">Total Cost: $</label>
+                <input type="text" id="total" name="total" value="0" readonly>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script src="./JS/JS/script.js"></script>
+</body>
+</html>
